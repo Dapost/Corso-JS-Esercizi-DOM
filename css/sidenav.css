@@ -1,0 +1,36 @@
+#sidenav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    height: 100%;
+    width: 80%;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translateX(-100%);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#sidenav.open{
+    transform: translateX(0);
+}
+
+#backdrop{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#backdrop.open{
+    display: block;
+}

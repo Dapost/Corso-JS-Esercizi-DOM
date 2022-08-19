@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidenav.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container d-flex">
+            <button class="btn" id="sidenavOpenButton">
+                <i class="bi-list" role="img"></i>
+            </button>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Foo</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Bar</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+            </ul>
+        </div>
+
+        <!-- SIDENAV -->
+        <div id="sidenav">
+            <h2  class="d-flex align-items-center justify-content-between w-100">
+                <span class="fs-4">Sidebar</span>
+
+                <button class="btn btn-light" id="sidenavCloseButton">
+                    <i class="bi bi-x ml-2 h-100"></i>
+                </button>
+            </h2>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <i class="bi bi-house-door-fill" role="img"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark">
+                      <i class="bi bi-speedometer2"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark">
+                        <i class="bi bi-table"></i>
+                        Orders
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark">
+                        <i class="bi bi-grid"></i>
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark">
+                        <i class="bi bi-person-circle"></i>
+
+                        Customers
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>User</strong>
+            </a>
+        </div>
+        <!-- /SIDENAV -->
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <div class="card-body py-4">
+                <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+
+                <div class="form-floating mb-2">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email">Email address</label>
+                    <div class="invalid-feedback"> Compila questo campo </div>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                    <div class="invalid-feedback"> Compila questo campo </div>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" id="showPassword"> Mostra Password
+                    </label>
+                </div>
+                <button id="signin" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Risultato Operazione</h5>
+            </div>
+            <div class="modal-body">
+              <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+              <button id="closeModalButton" type="button" class="btn btn-primary">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- BACKDROP -->
+       <div id="backdrop"></div>
+       <!-- /BACKDROP -->
+</body>
+
+</html>
